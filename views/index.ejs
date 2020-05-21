@@ -190,7 +190,12 @@
                   <p>You can get good music.</p>
                 </div>
                 <div class="col-md-4">
-                  <a href="/user/signup" class="filled-button">Sign Up</a>
+                  <% if (login) { %>
+                    <a href="/group/create" class="filled-button">Create new music</a>                  
+                  <%} else { %>
+                    <a href="/user/signup" class="filled-button">Create new music</a>
+                  <% } %>
+                  
                 </div>
               </div>
             </div>

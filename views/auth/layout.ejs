@@ -13,7 +13,7 @@
     <title>DV8 Audition</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <!--
 
 TemplateMo 546 Sixteen Clothing
@@ -23,9 +23,21 @@ https://templatemo.com/tm-546-sixteen-clothing
 -->
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="../assets/css/fontawesome.css">
-    <link rel="stylesheet" href="../assets/css/templatemo-sixteen.css">
-    <link rel="stylesheet" href="../assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-sixteen.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+    <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- Additional Scripts -->
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/owl.js"></script>
+  <script src="assets/js/slick.js"></script>
+  <script src="assets/js/isotope.js"></script>
+  <script src="assets/js/accordions.js"></script>
 
   </head>
   <body>
@@ -50,22 +62,34 @@ https://templatemo.com/tm-546-sixteen-clothing
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="">Home
-                  <span class="sr-only">(current)</span>
+              <li class="nav-item active" id="home">
+                <a class="nav-link" href="/">Home
+                  <!-- <span class="sr-only">(current)</span> -->
                 </a>
               </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="">Our Products</a>
+              <li class="nav-item" id="products">
+                <a class="nav-link" href="/products">Our Musics</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" id="about">
                 <a class="nav-link" href="/about">About Us</a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item" id="contact">
                 <a class="nav-link" href="">Contact Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/user/signin">Sign in</a>
+              </li> -->
+              <li class="nav-item" id="auth">
+                <% if (login) { %>
+                    <!-- <% if (user.role != 1) { %>
+                    <li class="nav-item">
+                        <a href="/dashboard" class="nav-link">
+                          <i class="material-icons">apps</i> Dashboard 
+                        </a>
+                    </li>
+                    <% } %> -->
+                  <a href="/user/logout" class="nav-link">Logout</a>
+                <%} else { %>
+                  <a class="nav-link" href="/user/signin">Sign in</a>
+                <% } %>
+                
               </li>
             </ul>
           </div>
@@ -93,17 +117,7 @@ https://templatemo.com/tm-546-sixteen-clothing
   </footer>
 
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-
-  <!-- Additional Scripts -->
-  <script src="../assets/js/custom.js"></script>
-  <script src="../assets/js/owl.js"></script>
-  <script src="../assets/js/slick.js"></script>
-  <script src="../assets/js/isotope.js"></script>
-  <script src="../assets/js/accordions.js"></script>
+  
 
 
   <script language = "text/Javascript"> 
